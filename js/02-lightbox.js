@@ -1,8 +1,5 @@
 import { galleryItems } from './gallery-items.js';
-
 const divEL =  document.querySelector(".gallery");
-
-
 function addImg(img) {
   img.map(el => divEL.insertAdjacentHTML('afterbegin',`
   <a class="gallery__link" href="${el.original}">

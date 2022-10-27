@@ -1,7 +1,5 @@
 import { galleryItems } from './gallery-items.js';
 const divEl =  document.querySelector(".gallery");
-
-
 function addImg(img) {
   img.map(el => divEl.insertAdjacentHTML('afterbegin',`
   <div class="gallery__item">
@@ -16,7 +14,6 @@ function addImg(img) {
 </div>`))
 return img;
 }
-
 function bigImgClick(elem) {
   elem.preventDefault();
   if (!elem.target.classList.contains('gallery__image')) {
