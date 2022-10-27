@@ -1,10 +1,10 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
-const divv =  document.querySelector(".gallery");
+const divEl =  document.querySelector(".gallery");
 
 
 function addImg(img) {
-  img.map(el => divv.insertAdjacentHTML('afterbegin',`
+  img.map(el => divEl.insertAdjacentHTML('afterbegin',`
   <div class="gallery__item">
   <a class="gallery__link" href="${el.original}">
     <img
@@ -18,7 +18,7 @@ function addImg(img) {
 return img;
 }
 
-function img(elem) {
+function bigImgClick(elem) {
   elem.preventDefault();
   if (!elem.target.classList.contains('gallery__image')) {
     return;
@@ -29,6 +29,5 @@ function img(elem) {
 instance.show()
 console.log(elem.target.dataset.source);
 }
-  divv.addEventListener("click", img)
-addImg(galleryItems);
+divEl.addEventListener("click", bigImgClick)
 console.log(addImg(galleryItems))
