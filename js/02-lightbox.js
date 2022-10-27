@@ -1,5 +1,5 @@
 import { galleryItems } from './gallery-items.js';
-// Change code below this line
+
 const divEL =  document.querySelector(".gallery");
 
 
@@ -9,17 +9,14 @@ function addImg(img) {
     <img
       class="gallery__image"
       src="${el.preview}"
-      alt="${el.description}"
-      title="${el.description}"
+      alt=${el.description}
     />
   </a>`))
 return img;
 }
 console.log(addImg(galleryItems));
-// function img(elem) {
-//   elem.preventDefault();
-new SimpleLightbox('.gallery a');
-
- // }
-
+new SimpleLightbox('.gallery a',{
+  captionsData: "alt",
+  captionDelay: 250,
+});
 
